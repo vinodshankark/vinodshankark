@@ -1,14 +1,14 @@
 # S1 Questions
 
 ## What are Channels and Kernels (according to EVA)?
-* Channels are containers of similar information. Image may have many channels based on color or curves etc. Music concert may have different channels like guitar, violin, keybord, drum etc
-* Kernal is a feature exctractor. Kernal is used for identifying feature from channel or image. Kernal creates feature map which will identify feature.
+* Channels are containers of similar information. Image may have many channels based on color or curves etc. Music concert may have different channels like guitar, violin, keyboard, drum, etcKernal is a feature extractor. 
+* Kernal is used for identifying features from channel or image. Kernal creates feature map which will identify the feature.
 #
 
 ## Why should we (nearly) always use 3x3 kernels?
-* For 5x5 of 25 parameters 5x5 kernal can be made by 3x3 kernal 2 times i.e 18 variables
-* For 7x7 of 49 parameters 7x7 kernal can be made by 3x3 kernal 3 times i.e 27 variables
-* 2x2 is difficult to identify feature. Curves are difficult to identify.
+* For 5x5 of 25 parameters, 5x5 kernel can be made by 3x3 kernel 2 times i.e 18 variables
+* For 7x7 of 49 parameters, 7x7 kernel can be made by 3x3 kernel 3 times i.e 27 variables
+* 2x2 is difficult to identify the feature. Curves are difficult to identify.
 #
 
 ## How many times to we need to perform 3x3 convolutions operations to reach close to 1x1 from 199x199 (type each layer output like 199x199 > 197x197...)
@@ -117,12 +117,12 @@
 #
 
 ## How are kernels initialized? 
-* Kernals are initialized with random values. Eventhough kernals are initialized with random values it will arrive at right values during training.
+* Kernels are initialized with random values. Even though kernels are initialized with random values it will arrive at the right values during training.
 #
 
 ## What happens during the training of a DNN?
-* During training of DNN the kernals which are initialized with random values will arrive at almost correct values which will do prediction. From this, network is able to predict what is there in an image.
-* But this can be done by breaking the image into individual components. But this breaking of an image is done using feature. This is done by kernal which is initilized with random values.
-* When the network is doing the training these randomly intialized values are turned into correct value.
+* During the training of DNN, the kernels which are initialized with random values will arrive at almost correct values which will do prediction. From this, the network is able to predict what is there in an image.
+* But this can be done by breaking the image into individual components. But this breaking of an image is done using the feature. This is done by the kernel which is initialized with random values.
+* When the network is doing the training these randomly initialized values are turned into correct value.
 
 #
