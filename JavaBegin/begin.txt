@@ -1,0 +1,82 @@
+Java Begin:
+-----------
+
+JDK:
+----
+Java Development Kit. It is environment for developing Java application.
+	JDK contains JRE (Java Runtime Environment) which contains libraries and classes to develop application, inside it contains JVM (Java Virtual Machine). Responsible for executing Java program.
+Please use LTS (long term support)
+
+Compile and Run Java Code:
+-------------------------
+javac Main.java
+java Main
+
+Package:
+--------
+Allows to group and organize java files.
+
+Java Comments:
+--------------
+Comments are useful to document and ignored when we run Java program.
+1. //Single line comment
+2. /* 
+	Multiline comment 
+	*/
+
+Variables:
+----------
+Conceptually its a box which can store anything.
+
+Premitive Datatype and Reference Datatype
+
+Class and Object
+-------------------
+-------------------
+Using class we can create Object.
+
+class A {}
+
+A obj = new A(); 
+// obj = Reference. 
+// new A() is Object. New keyword provides space in heap memory.
+// A() is constructor.
+
+Constructor
+-----------
+static methods dont need object to call.
+Constructor is 
+1. member method 
+2. Same name as class name 
+3. Doesnt return anything.
+4. Used allocate memory for object.
+
+public A() {}
+public A(int a) {} 
+public A(int a, float b) {}
+
+
+Modifiers in java
+-----------------
+With class you can use only public, abstract and final
+private and protected cannot be used, I may be used inside class.
+
+
+If variable declared any of the below,
+private: specific class.
+default: specific Package.
+public: Any class or package.
+protected: subsidising class.
+
+Static keyword
+--------------
+With Static keyword dont need to instantiate class. Static variables or methods can be acceesed directly.
+
+Usage is Classname.member.
+
+All non-static members share same static variables.
+
+Static Block
+-------------
+Its a block which executed when class is loaded into JVM. It is executed before main method
+static {}

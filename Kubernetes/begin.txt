@@ -1,0 +1,40 @@
+Kubernetes
+----------
+What is Kubernetes ?
+------------------
+container orchestration tool
+Helps to manage containeraised application.
+
+
+Due to microservices increased the usage of container. This will lead to bring the orchestration tool.
+
+Main features of orchestration tool
+-----------------------------------
+High availability.
+scalability.
+Disaster recovery.
+
+Kubernetes components
+---------------------
+Node -> Simple server.
+----
+Basic component of k8s is Pod. 
+Its abstraction over container. It creates running environment in container.
+Usually 1 application per pod.
+
+1. Each pod gets internal IP address.
+
+
+Service and Ingress
+-------------------
+permanent IP address for pod.
+
+For external services for accessing outside world component used in K8s is Ingress.
+
+ConfigMap and Secret
+--------------------------------
+external configuration of your application.
+Secret to store secret data, base64 encoded.
+
+Data Storage
+------------
