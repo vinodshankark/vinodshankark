@@ -1,6 +1,5 @@
 Java Begin:
 -----------
-
 JDK:
 ----
 Java Development Kit. It is environment for developing Java application.
