@@ -43,14 +43,14 @@ A obj = new A();
 
 Constructor
 -----------
-static methods dont need object to call.
+static methods no need to use object to call.
 Constructor is 
 1. member method 
 2. Same name as class name 
 3. Doesnt return anything.
 4. Used allocate memory for object.
 
-public A() {}
+public A() {}	
 public A(int a) {} 
 public A(int a, float b) {}
 
@@ -79,3 +79,34 @@ Static Block
 -------------
 Its a block which executed when class is loaded into JVM. It is executed before main method
 static {}
+
+
+Encapsulation
+--------------
+class A { int i;}
+class Main {
+	psvm() {
+		A obj = new A();
+		obj.i = 5;
+	}
+}
+Above changing the value without using method. Above example is not encapsulation.
+
+If variable is private above setting is not possible.
+
+To set value we need getters and setters. with this encapsulation is achieved. With this we are making variable hidden.
+
+
+Inheritance
+-----------
+All features A class comes to B. 
+class A {}
+class B extends B{}
+
+1. Single level Inheritance
+2. multi level
+3. Multiple Inheritance is not supported in Java.
+
+completed 8.5
+
+

@@ -1,0 +1,89 @@
+Docker
+----------------------------------------------------------------
+----------------------------------------------------------------
+What is Docker?
+Work with Image.
+
+What is container?
+Container is a way to package application with all necessary dependencies and configuration.
+This will make artifict easily portable between dev and operations.
+This will make development and deployment process more efficient.
+
+Containers live in container repositories private or public. public repositories for Docker is Docker hub.
+
+Before Containers
+-------------------
+Each dependencies application should be installed on th OS and installation steps are multiple and will vary OS to OS.
+
+After Containers
+-------------------
+Container is linux based image, It has its own environment. you need to install necessary container image. Download is easy one command for all applcations.
+Since it is encapsulated to one container it easy install. Need to have docker installed.
+
+Container made of below layers
+---------------------------
+Container is layers of images 
+1. Mostly linux base image Linux alpine:3.10
+2. On top of that we have application image
+
+Docker image vs Docker Container
+---------------------------
+Docker image:
+Actual package/artifact which we can move around and not running.
+
+Docker Container:
+When we pull image to local and start it then it is Container and it is running.
+
+Docker vs Virtual machine
+---------------------------
+1. Hardware
+2. OS Kernel
+3. Application
+Docker
+---------
+Docker Virtualizes the application layer in OS
+Size is small.
+Docker containers install and run faster compare to VM
+Linux based Docker may not be compatible to run on windows. Different docker images are there to install.
+
+Virtual Machine
+-------------
+Virtualizes complete OS. It boots up seperate.
+Size is bigger
+VM can run on any OS host
+
+docker pull imagename -> Pulls the Image to local
+docker run imagename -> combines and pull and start
+docker start container_id -> docker start container_id to restart.
+docker stop container_id -> docker stop container_id
+docker run -d -p6000:6379 redis -> Run in backgroud/detach mode and port binding.
+docker ps -> list of containers
+docker ps -a -> Gives old build running or stopped. Using this container ID we can restart
+docker logs container_id -> To get logs 
+docker run -d -p6000:6379 --name redis-new redis -> Providing name to container
+docker exec -it bad12b55e5b4 /bin/bash -> opening that container. 
+docker rm container_id/name
+
+
+Docker Network
+--------------
+Isolated Docker Network
+Node js will connect using localhost and port number.
+
+docker network ls
+docker network create mongo-network
+
+
+
+
+docker run -d \
+    -p 8081:8081 \
+    -e ME_CONFIG_MONGODB_ADMINUSERNAME="admin" \
+    -e ME_CONFIG_MONGODB_ADMINPASSWORD="password" \
+    --net mongo-network \
+    --name mongo-express \
+    -e ME_CONFIG_MONGODB_SERVER="mongodb" \
+    mongo-express
+
+
+

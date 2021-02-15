@@ -9,19 +9,17 @@ $ cat .gitignore
 
 *.tfstate.*
 
-# dataflows
-dataflows/.idea/
-dataflows/target/
-dataflows/google-cloud-teleport-java.iml
 .idea/
 
 # local 
 *DS_Store
 *.ropeproject/
-scripts/schema_generator/out/
 
 **/*.iml
+**/*.class
+**/*.hbs
 **/target/
+**/bin/
 *.pyc
 *.pytest_cache/
 
