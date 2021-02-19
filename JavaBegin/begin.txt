@@ -32,7 +32,7 @@ Premitive Datatype and Reference Datatype
 Class and Object
 -------------------
 -------------------
-Using class we can create Object.
+Using class we can create Object. Class is blue print to create object.
 
 class A {}
 
@@ -189,8 +189,112 @@ Abstract methods are those methods which dont have implementation. You cannot ha
 
 Any class which has abstract methods it becomes abstract class. If that extended class implements method becomes concrete class.
 
+Interface
+----------
+To support multiple inheritance we need to use interface.
+In interface you can declare method, but cannot define method. By default interface method is abstract.
+
+interface A {
+	public void show();
+}
+
+class B implements A {
+	public void show() {
+		sout("hello")
+	}
+
+	public void display() {
+		sout("hi")
+	}
+}
+
+B obj = new B();
+obj.show();
+obj.display();
+
+For interface you cannot create constructor and you cannot have object.
+A obj = new B();
+obj.show();
+obj.display(); // This will not work because it is not part of A class
+
+3 types if interface:
+Marker Interface -> Without any methods or dont have any method
+SAM(Single abstract method) -> functional interface when we use lamda expression -> which has only 1 method 
+Normal -> This is normal interface.
+
+Interface in java8
+-----------------
+Default Methods and Static Methods.
+
+How to define method in interface ?
+create interface
+interface I {
+	void add();
+	default void show() { // To define need to use default keyword.
+
+	} 
+}
+
+Interface J {
+	default void show() {}
+}
+
+class implements I, J {
+	public void show() { // Need to overrride show since it is part both the interface. If it is part of only one interface then no need to overrride.
+
+	}
+}
+
+Class has more power, It will hide interface method
+
+Interface I {
+	default void show() {}
+}
+
+class J {
+	public void show() {}
+}
+
+class X implements I, extends J {
+	
+}
+obj.show() // will call class method not the interface.
+
+Static Methods in interface
+---------------------------
+interface I {
+	Static void show() {
+
+	}
+}
+
+You call interface method like below
+I.show();
 
 
+Marker Interface
+-------------
+class Demo implements P{
+	void show() {
+		sout("demo");
+	}
+}
 
+class Main {
+	psvm() {
+		Demo obj = new Demo();
+		if( obj instanceOf P) {
+			obj.show()
+		}
+		else {
+			sout("No permission")
+		}
+	}
+}
 
+Interface P {
+	
+}
+
+Lots of Interfaces like serializable, Remote.
 
