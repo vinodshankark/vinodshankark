@@ -1,0 +1,3 @@
+Functional Programming
+-----------------------
+Its a declarative programming. What things are.
