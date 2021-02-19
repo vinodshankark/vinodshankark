@@ -101,12 +101,96 @@ Inheritance
 -----------
 All features A class comes to B. 
 class A {}
-class B extends B{}
+class B extends A{}
 
 1. Single level Inheritance
 2. multi level
 3. Multiple Inheritance is not supported in Java.
 
-completed 8.5
+Super
+------
+By Default every constructor will have keyword super. It will always call the base constructor.
+In java every class extends Object class.
+
+Polymorphism
+------------
+Polymorphism means many behavior.
+
+class A {
+	public void show(){
+
+	}
+	public void show(int i){
+
+	}
+	public void show(float i){
+
+	}
+}
+
+psvm() {
+	A obj = new A();
+	obj.show(); // first method will be called
+	obj.show(5); // second method will be called
+	obj.show(5.1f); // third method will be called
+	// Above is method overloading
+}
+
+
+Methods Overriding
+class A {
+	public void show() {
+
+	}
+}
+
+class B extends A{
+	public void show() {
+
+	}
+}
+
+psvm() {
+	B obj = new B();
+	obj.show() // class B method show will be called
+}
+
+
+Final keyword
+-------------
+Once value assigned to variable it cannot be changed. You can declare without initialization.
+
+For methods by using final keyword user cannot overrride the method.
+
+For class by using final keyword user cannot extends the class.
+
+This keyword
+-------------
+This is current instance
+
+class A{
+	private int x; // instance variable
+	public A(int x) { // local variable
+		this.x = x; // current instance
+	}
+}
+
+
+Anonymous object
+-------------
+Dont know name object then it is Anonymous object.
+Object which dont have reference that is called as Anonymous object. Advantage is it will not use stack memory to store reference value. only it will allocate heap memory to store object and methods.
+
+eg: new A().show();
+
+Abstraction
+------------
+Abstract methods are those methods which dont have implementation. You cannot have object for abstract class because it incomplete. This has only abstract methods. Abstract class can have normal methods implemented.
+
+Any class which has abstract methods it becomes abstract class. If that extended class implements method becomes concrete class.
+
+
+
+
 
 

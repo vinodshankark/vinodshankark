@@ -1,9 +1,9 @@
-package com.company;
+package com.company.inheritance;
 
 public class Main {
 
     public static void main(String[] args) {
-        AddSubMul obj = new AddSubMul();
+       AddSubMul obj = new AddSubMul();
         obj.num1 = 5;
         obj.num2 = 4;
         obj.sum();
