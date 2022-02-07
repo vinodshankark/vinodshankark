@@ -4,6 +4,7 @@ public class ClassBasicDemo {
 
   public static void main(String[] args) {
     Abc obj = new Abc(12, 12335f);
+    obj = new Abc();
   }
 
 }

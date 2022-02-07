@@ -4,18 +4,20 @@ public class ObjectCounter {
   public static void main(String[] args) {
     NumObj obj = new NumObj();
     NumObj obj1 = new NumObj();
-    obj.counter();
+    NumObj obj2 = new NumObj();
+    NumObj.showCounter();
+    obj2 = new NumObj();
+    NumObj.showCounter();
   }
 }
 
 class NumObj {
   static int i;
-
   public NumObj() {
-    i++;
+    NumObj.i++;
   }
 
-  public void counter() {
-    System.out.println(i);
+  public static void showCounter() {
+    System.out.println("Object Counter: "+NumObj.i);
   }
 }

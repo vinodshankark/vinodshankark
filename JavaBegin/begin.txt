@@ -26,6 +26,7 @@ Comments are useful to document and ignored when we run Java program.
 Variables:
 ----------
 Conceptually its a box which can store anything.
+3 Types of variables. Local, Instance and Static
 
 Premitive Datatype and Reference Datatype
 
@@ -41,39 +42,84 @@ A obj = new A();
 // new A() is Object. New keyword provides space in heap memory.
 // A() is constructor.
 
+class B {
+int x;
+void show()
+main() {
+B obj = new B() // 101 in Stack memory which will point to object in heap memory
+obj.x = 10;
+B obj = new B() // 102 in stack memory and Earlier obj=101 is ready for garbage collection
+}
+}
+int i = 5; Stored in Stack memory.
+obj also strored in Stack memory.
+obj= null eligible for garbage collection
+
 Constructor
 -----------
-static methods no need to use object to call.
+static methods no need to use object to call. It is called automatically
 Constructor is 
 1. member method 
 2. Same name as class name 
 3. Doesnt return anything.
 4. Used allocate memory for object.
 
-public A() {}	
-public A(int a) {} 
+//Constructor overloading
+public A() {}	-> Default Constructor
+public A(int a) {} -> Parameterized constructor
 public A(int a, float b) {}
+
+
+Constructor can be used for initializing values
+class A {
+int i;
+float j;
+public A() {
+i=5;
+j=6.5f;
+}
+}
+
+Object Passing in Java:
+----------------------
+Object passing in Java. Passing object means passing hash code not the object.
+In Java everything is call by value.
 
 
 Modifiers in java
 -----------------
 With class you can use only public, abstract and final
-private and protected cannot be used, I may be used inside class.
+private and protected cannot be used, I may be used inner class.
 
 
 If variable declared any of the below,
-private: specific class.
-default: specific Package.
+private: specific class. 
+default: specific Package. Cannot access outside package
+class A {}// Default modifier
+method() // Default modifier. Cannot access outside package
 public: Any class or package.
 protected: subsidising class.
 
+Javap Command 
+------------
+javac to compile java to bytecode
+javap gives the structure of the java code. What are all the function, variables etc defined.
+
 Static keyword
 --------------
-With Static keyword dont need to instantiate class. Static variables or methods can be acceesed directly.
+With Static keyword dont need to instantiate class. Static variables or methods can be acceesed directly by classname.variable or classname.method.
 
 Usage is Classname.member.
 
 All non-static members share same static variables.
+
+non static variables cannot be used inside static method. Below method will throw error.
+
+class A {
+int i
+psvm(){
+i++
+}
 
 Static Block
 -------------
